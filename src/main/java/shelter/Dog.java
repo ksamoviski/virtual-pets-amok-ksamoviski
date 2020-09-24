@@ -5,15 +5,19 @@ public class Dog extends LivingPet {
     private int energyLevel;
 
 
-    public Dog(String name, String characteristics, int hungerLevel,
+    public Dog(String petId, String name, String characteristics, int hungerLevel,
                int thirstLevel, int boredomLevel, int energyLevel) {
-        super(name, characteristics, hungerLevel, thirstLevel, boredomLevel);
+        super(petId, name, characteristics, hungerLevel, thirstLevel, boredomLevel);
 
         this.energyLevel = energyLevel;
     }
 
     public int getEnergyLevel() {
         return energyLevel;
+    }
+
+    public String getPetId() {
+        return petId;
     }
 
     @Override

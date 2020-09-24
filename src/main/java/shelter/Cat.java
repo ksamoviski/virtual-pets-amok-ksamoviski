@@ -3,8 +3,8 @@ package shelter;
 public class Cat extends LivingPet{
 
 
-    public Cat(String name, String characteristics, int hungerLevel,
+    public Cat(String petId, String name, String characteristics, int hungerLevel,
                int thirstLevel, int boredomLevel) {
-        super(name, characteristics, hungerLevel, thirstLevel, boredomLevel);
+        super(petId, name, characteristics, hungerLevel, thirstLevel, boredomLevel);
     }
 }

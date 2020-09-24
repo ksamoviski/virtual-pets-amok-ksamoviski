@@ -1,14 +1,16 @@
 package shelter;
 
 public abstract class LivingPet {
+    protected String petId;
     protected String name;
     protected String characteristics;
     protected int hungerLevel;
     protected int thirstLevel;
     protected int boredomLevel;
 
-    public LivingPet(String name, String characteristics, int hungerLevel,
+    public LivingPet(String petId, String name, String characteristics, int hungerLevel,
                      int thirstLevel, int boredomLevel) {
+        this.petId = petId;
         this.name = name;
         this.characteristics = characteristics;
         this.hungerLevel = hungerLevel;
