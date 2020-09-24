@@ -1,19 +1,20 @@
 package shelter;
 
-public abstract class LivingPet {
+public class RoboPet {
     protected String name;
     protected String characteristics;
     protected int hungerLevel;
     protected int thirstLevel;
     protected int boredomLevel;
+    protected int stiffnessLevel;
 
-    public LivingPet(String name, String characteristics, int hungerLevel,
-                     int thirstLevel, int boredomLevel) {
+    public RoboPet(String name, String characteristics, int hungerLevel, int thirstLevel, int boredomLevel, int stiffnessLevel) {
         this.name = name;
         this.characteristics = characteristics;
         this.hungerLevel = hungerLevel;
         this.thirstLevel = thirstLevel;
         this.boredomLevel = boredomLevel;
+        this.stiffnessLevel = stiffnessLevel;
     }
 
     public int getHungerLevel(){
@@ -26,6 +27,10 @@ public abstract class LivingPet {
 
     public int getBoredomLevel(){
         return boredomLevel;
+    }
+
+    public int getStiffnessLevel(){
+        return stiffnessLevel;
     }
 
     public String getName(){
@@ -48,5 +53,7 @@ public abstract class LivingPet {
         boredomLevel -=10;
     }
 
-
+    public void oil() {
+        stiffnessLevel -=10;
+    }
 }

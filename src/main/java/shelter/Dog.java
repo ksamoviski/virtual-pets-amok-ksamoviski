@@ -2,9 +2,18 @@ package shelter;
 
 public class Dog extends LivingPet {
 
+    private int energyLevel;
 
-    public Dog(String name, String characteristics, int hungerLevel, int thirstLevel, int boredomLevel) {
+
+    public Dog(String name, String characteristics, int hungerLevel,
+               int thirstLevel, int boredomLevel, int energyLevel) {
         super(name, characteristics, hungerLevel, thirstLevel, boredomLevel);
+
+        this.energyLevel = energyLevel;
+    }
+
+    public int getEnergyLevel() {
+        return energyLevel;
     }
 
     @Override
@@ -22,6 +31,8 @@ public class Dog extends LivingPet {
         boredomLevel -=10;
     }
 
+    public void walk() {
+       energyLevel -=10;
+    }
 
-//    don't forget walk method
 }

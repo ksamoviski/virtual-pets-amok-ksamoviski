@@ -4,9 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DogTest {
+public class RoboDogTest {
 
-    Dog underTest = new Dog("Archer", "Lazy", 50,50,50, 50);
+    RoboDog underTest = new RoboDog("Val", "Smart", 50,
+            50,50, 50);
 
     @Test
     public void shouldDecreaseHungerBy10WhenFed(){
@@ -30,12 +31,10 @@ public class DogTest {
     }
 
     @Test
-    public void shouldDecreaseEnergyBy10WhenWalked(){
-        underTest.walk();
-        int currentEnergy = underTest.getEnergyLevel();
-        assertEquals (currentEnergy, 40);
+    public void shouldDecreaseStiffnessBy10WhenOiled(){
+        underTest.oil();
+        int currentStiffness = underTest.getStiffnessLevel();
+        assertEquals (currentStiffness, 40);
     }
-
-
 
 }
