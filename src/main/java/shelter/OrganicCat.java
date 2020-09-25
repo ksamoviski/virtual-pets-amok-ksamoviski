@@ -7,4 +7,5 @@ public class OrganicCat extends OrganicPet {
                       int thirstLevel, int boredomLevel) {
         super(name, characteristics, hungerLevel, thirstLevel, boredomLevel);
     }
+
 }

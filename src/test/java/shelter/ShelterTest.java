@@ -13,12 +13,8 @@ public class ShelterTest {
     RoboCat roboCat = new RoboCat("Fred", "Smart", 50, 50);
 
 
-    @Test
-    public void shouldBeAbleToHireAnOrganicDog(){
-        underTest.hire(organicDog);
-        ShelterPet foundOrganicDog = underTest.findShelterPets("Archer");
-        assertEquals("Archer", foundOrganicDog.getName());
-    }
+
+
 
     }
 

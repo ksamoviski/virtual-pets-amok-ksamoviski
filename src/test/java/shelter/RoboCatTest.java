@@ -6,22 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RoboCatTest {
 
-    RoboCat underTest = new RoboCat("Poke", "Empathetic",
-            50,50,50, 50);
+    RoboCat underTest = new RoboCat("Poke", "Empathetic", 50,50);
 
-    @Test
-    public void shouldDecreaseHungerBy10WhenFed(){
-        underTest.feed();
-        int currentHunger = underTest.getHungerLevel();
-        assertEquals (currentHunger, 40);
-    }
-
-    @Test
-    public void shouldDecreaseThirstBy10WhenWatered(){
-        underTest.water();
-        int currentThirst = underTest.getThirstLevel();
-        assertEquals (currentThirst, 40);
-    }
 
     @Test
     public void shouldDecreaseBoredomBy10WhenPlayed(){
