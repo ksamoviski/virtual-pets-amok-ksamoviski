@@ -28,8 +28,16 @@ public class ShelterTest {
         ShelterPet foundOrganicCat = underTest.findPet("Fluffy");
         assertEquals("Archer", foundOrganicDog.getName());
         assertEquals("Fluffy", foundOrganicCat);
+    }
 
-
+    @Test
+    public void shouldBeAbleToAddARoboDogAndRoboCat(){
+        underTest.add(roboDog);
+        underTest.add(roboCat);
+        ShelterPet foundRoboDog = underTest.findPet("Dino");
+        ShelterPet foundRoboCat = underTest.findPet("Fred");
+        assertEquals("Dino", foundRoboDog.getName());
+        assertEquals("Fred", foundRoboCat.getName());
     }
 
     }
