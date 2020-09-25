@@ -43,13 +43,24 @@ public class ShelterApp {
 
             System.out.println("Which pet would you like to feed?");
             String petName = input.nextLine();
+            myOrganicPet.play();
+            System.out.println("I'm getting sleepy...");
+            System.out.println("Energy Level = " + myOrganicPet.getBoredomLevel());
+
+        }else if(userChoice.equals("2")){
+            System.out.println("Great! You want to see our Robotic Pets");
+            System.out.println("Here are our Robotic Pets");
+            myShelter.getRoboPets();
+
+            System.out.println("Which pet would you like to feed?");
+            String petName = input.nextLine();
             myRoboPet.play();
-            System.out.println("My batteries are running low!");
+            System.out.println("I'm getting sleepy...");
             System.out.println("Energy Level = " + myRoboPet.getBoredomLevel());
         }
     } while (!userChoice.equals("9"));
         System.out.println("Thanks for banking with us today");
     }
 }
-        }
+
 

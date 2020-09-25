@@ -1,6 +1,6 @@
 package shelter;
 
-public class ShelterPet { ;
+public abstract class  ShelterPet { ;
     protected String name;
     protected String characteristics;
 
