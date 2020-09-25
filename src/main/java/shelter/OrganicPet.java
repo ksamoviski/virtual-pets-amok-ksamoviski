@@ -25,18 +25,6 @@ public abstract class OrganicPet extends ShelterPet {
         return boredomLevel;
     }
 
-    public String getName(){
-        return name;
-    }
-
-    public String getCharacteristics(){
-        return characteristics;
-    }
-
-    public String getPetId() {
-        return petId;
-    }
-
     public void feed(){
         hungerLevel -=10;
     }

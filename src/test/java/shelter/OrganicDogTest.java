@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OrganicDogTest {
 
-    OrganicDog underTest = new OrganicDog("2", "Archer", "Lazy",50,50,50, 50);
+    OrganicDog underTest = new OrganicDog("Archer", "Lazy", 50,50,50,50);
 
     @Test
     public void shouldDecreaseHungerBy10WhenFed(){

@@ -18,14 +18,6 @@ public abstract class RoboPet extends ShelterPet {
         return stiffnessLevel;
     }
 
-    public String getName(){
-        return name;
-    }
-
-    public String getCharacteristics(){
-        return characteristics;
-    }
-
     public void play(){
         boredomLevel -=10;
     }
