@@ -76,13 +76,12 @@ public class ShelterTest {
 
     @Test
     public void shouldBeAbleToRemoveAnOrganicDog(){
+        underTest.add(organicDog);
         underTest.remove(organicDog);
         ShelterPet foundOrganicDog = underTest.findPet("Archer");
-        assertEquals("Archer", foundOrganicDog.getName());
+        assertEquals(foundOrganicDog, null);
 
     }
-
-
 
 }
 
