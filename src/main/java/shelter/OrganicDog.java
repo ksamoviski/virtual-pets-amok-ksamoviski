@@ -11,6 +11,7 @@ public class OrganicDog extends OrganicPet {
         this.energyLevel = energyLevel;
     }
 
+
     public int getEnergyLevel() {
         return energyLevel;
     }
