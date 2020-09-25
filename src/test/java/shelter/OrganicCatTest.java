@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CatTest {
+public class OrganicCatTest {
 
-    Cat underTest = new Cat("2", "Dot", "Lazy", 50,50,50);
+    OrganicCat underTest = new OrganicCat("2", "Dot", "Lazy", 50,50,50);
 
 
     @Test

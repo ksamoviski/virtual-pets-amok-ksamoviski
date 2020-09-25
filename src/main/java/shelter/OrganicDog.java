@@ -1,23 +1,19 @@
 package shelter;
 
-public class Dog extends LivingPet {
+public class OrganicDog extends OrganicPet {
 
     private int energyLevel;
 
 
-    public Dog(String petId, String name, String characteristics, int hungerLevel,
-               int thirstLevel, int boredomLevel, int energyLevel) {
-        super(petId, name, characteristics, hungerLevel, thirstLevel, boredomLevel);
+    public OrganicDog(String name, String characteristics, int hungerLevel,
+                      int thirstLevel, int boredomLevel, int energyLevel) {
+        super(name, characteristics, hungerLevel, thirstLevel, boredomLevel);
 
         this.energyLevel = energyLevel;
     }
 
     public int getEnergyLevel() {
         return energyLevel;
-    }
-
-    public String getPetId() {
-        return petId;
     }
 
     @Override

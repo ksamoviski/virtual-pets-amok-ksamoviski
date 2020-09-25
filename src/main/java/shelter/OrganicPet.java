@@ -1,18 +1,13 @@
 package shelter;
 
-public abstract class LivingPet {
-    protected String petId;
-    protected String name;
-    protected String characteristics;
+public abstract class OrganicPet extends ShelterPet {
     protected int hungerLevel;
     protected int thirstLevel;
     protected int boredomLevel;
 
-    public LivingPet(String petId, String name, String characteristics, int hungerLevel,
-                     int thirstLevel, int boredomLevel) {
-        this.petId = petId;
-        this.name = name;
-        this.characteristics = characteristics;
+    public OrganicPet(String name, String characteristics, int hungerLevel,
+                      int thirstLevel, int boredomLevel) {
+        super(name, characteristics);
         this.hungerLevel = hungerLevel;
         this.thirstLevel = thirstLevel;
         this.boredomLevel = boredomLevel;
@@ -38,6 +33,10 @@ public abstract class LivingPet {
         return characteristics;
     }
 
+    public String getPetId() {
+        return petId;
+    }
+
     public void feed(){
         hungerLevel -=10;
     }
@@ -49,6 +48,7 @@ public abstract class LivingPet {
     public void play(){
         boredomLevel -=10;
     }
+
 
 
 }

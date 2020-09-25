@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DogTest {
+public class OrganicDogTest {
 
-    Dog underTest = new Dog("2", "Archer", "Lazy",50,50,50, 50);
+    OrganicDog underTest = new OrganicDog("2", "Archer", "Lazy",50,50,50, 50);
 
     @Test
     public void shouldDecreaseHungerBy10WhenFed(){
