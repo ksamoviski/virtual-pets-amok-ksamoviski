@@ -17,6 +17,7 @@ public class ShelterApp {
         RoboCat dot = new RoboCat("Dot", "Smart", 50, 50);
 
         Shelter myShelter = new Shelter();
+
         String userChoice;
 
         myShelter.add(archer);
@@ -28,10 +29,27 @@ public class ShelterApp {
         myShelter.add(fred);
         myShelter.add(dot);
 
-        System.out.println("Welcome to my Pet Shelter!");
+        do{System.out.println("Welcome to my Pet Shelter!");
+        System.out.println();
+        System.out.println("Press 1 to see our Living Pets");
+        System.out.println("Press 2 to see our Robotic Pets");
+        System.out.println("Press 9 to exit");
+        userChoice = input.nextLine();
 
+        if (userChoice.equals("1")){
+            System.out.println("Great! You want to see our Living Pets");
+            System.out.println("Here are our Living Pets");
+            myShelter.getOrganicPets();
 
+            System.out.println("Which pet would you like to feed?");
+            String petName = input.nextLine();
+            myRoboPet.play();
+            System.out.println("My batteries are running low!");
+            System.out.println("Energy Level = " + myRoboPet.getBoredomLevel());
+        }
+    } while (!userChoice.equals("9"));
+        System.out.println("Thanks for banking with us today");
     }
-
 }
+        }
 

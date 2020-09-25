@@ -1,6 +1,6 @@
 package shelter;
 
-public abstract class RoboPet extends ShelterPet {
+public class RoboPet extends ShelterPet {
     protected int boredomLevel;
     protected int stiffnessLevel;
 
