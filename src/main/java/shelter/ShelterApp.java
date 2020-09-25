@@ -33,7 +33,14 @@ public class ShelterApp {
         System.out.println();
         System.out.println("Press 1 to see our Living Pets");
         System.out.println("Press 2 to see our Robotic Pets");
-        System.out.println("Press 9 to exit");
+        System.out.println("Press 3 to feed a pet");
+        System.out.println("Press 4 to give a pet a drink");
+        System.out.println("Press 5 to play with a pet");
+        System.out.println("Press 6 to take a dog for a walk");
+        System.out.println("Press 7 to oil a pet");
+        System.out.println("Press 8 to adopt a pet");
+        System.out.println("Press 9 to drop off a per");
+        System.out.println("Type exit to leave the game");
         userChoice = input.nextLine();
 
         if (userChoice.equals("1")){
@@ -41,26 +48,94 @@ public class ShelterApp {
             System.out.println("Here are our Living Pets");
             myShelter.getOrganicPets();
 
-            System.out.println("Which pet would you like to feed?");
-            String petName = input.nextLine();
-            myOrganicPet.play();
-            System.out.println("I'm getting sleepy...");
-            System.out.println("Energy Level = " + myOrganicPet.getBoredomLevel());
-
         }else if(userChoice.equals("2")){
             System.out.println("Great! You want to see our Robotic Pets");
             System.out.println("Here are our Robotic Pets");
             myShelter.getRoboPets();
 
+        }else if(userChoice.equals("3")){
+            System.out.println("Great! You want to feed one of our pets");
+            System.out.println("Here are the pets that can be fed");
+            myShelter.getOrganicPets();
+
             System.out.println("Which pet would you like to feed?");
             String petName = input.nextLine();
-            myRoboPet.play();
-            System.out.println("I'm getting sleepy...");
-            System.out.println("Energy Level = " + myRoboPet.getBoredomLevel());
+            myOrganicPet.feed();
+            System.out.println("Thanks " + petName + " was hungry!");
+            System.out.println("Energy Level = " + myOrganicPet.getHungerLevel());
         }
-    } while (!userChoice.equals("9"));
-        System.out.println("Thanks for banking with us today");
+
+        else if(userChoice.equals("4")){
+            System.out.println("Great! You want to give one of our pets a drink");
+            System.out.println("Here are the pets that can have a drink");
+            myShelter.getOrganicPets();
+
+            System.out.println("Which pet would you like to give a drink to?");
+            String petName = input.nextLine();
+            myOrganicPet.water();
+            System.out.println("Thanks " + petName + " was thirsty!");
+            System.out.println("Thirst Level = " + myOrganicPet.getThirstLevel());
+        }
+
+        else if(userChoice.equals("5")){
+            System.out.println("Great! You want to play with one of our pets");
+            System.out.println("Here are the pets you can play with");
+            myShelter.getAllPets();
+
+            System.out.println("Which pet would you like to play with");
+            String petName = input.nextLine();
+            myShelterPets.play();
+            System.out.println("Thanks " + petName + " needed some exercise!");
+            System.out.println("Thirst Level = " + myShelterPet.getBoredomLevel());
+        }
+
+        else if(userChoice.equals("6")){
+            System.out.println("Great! You want to walk one of our dogs");
+            System.out.println("Here are the dogs that can go for walks");
+            myShelter.getAllPets();
+
+            System.out.println("Which dog would you like to walk?");
+            String petName = input.nextLine();
+            myOrganicDog.walk();
+            System.out.println("Thanks " + petName + " needed some exercise!");
+            System.out.println("Energy Level = " + myOrganicDog.getEnergyLevel());
+        }
+
+        else if(userChoice.equals("7")){
+            System.out.println("Great! You want to oil a robotic pet!");
+            System.out.println("Here are the dogs that can get oil");
+            myShelter.getAllPets();
+
+            System.out.println("Which robotic pet would you like to oil?");
+            String petName = input.nextLine();
+            myRoboticPets.oil();
+            System.out.println("Thanks " + petName + " needed some oil!");
+            System.out.println("Stiffness Level = " + myRoboticPet.getStiffnessLevel());
+        }
+
+        else if(userChoice.equals("8")){
+            System.out.println("You want to adopt a pet");
+            System.out.println("Here are our pets");
+            myShelter.getShelterPets();
+
+            System.out.println("Which pet would you like to adopt");
+            String petName = input.nextLine();
+            myShelter.remove(ShelterPet shelterPetToRemove);
+            System.out.println("I can't wait to see my new home");
+
+        }
+
+
+        else if(userChoice.equals("9")){
+            System.out.println("You want to drop off a pet");
+            System.out.println("What is the name of your pet?");
+            String petName = input.nextLine();
+            myShelter.add(ShelterPet shelterPetToAdd);
+            System.out.println("Sorry your pet didn't work out.");
+        }
+
+        } while (!userChoice.equals("exit"));
+        System.out.println("Thanks for visiting the shelter today!");
     }
 }
-
 

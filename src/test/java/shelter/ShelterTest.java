@@ -83,6 +83,16 @@ public class ShelterTest {
 
     }
 
+    @Test
+    public void shouldBeAbleToDisplayAllOrganicDogs(){
+        underTest.add(organicDog);
+        underTest.add(organicCat);
+        underTest.add(roboDog);
+        underTest.add(roboCat);
+        Collection<ShelterPet> organicDogs = underTest.getOrganicDogs();
+        assertThat(organicDogs, containsInAnyOrder(organicDogs));
+    }
+
 }
 
 

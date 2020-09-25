@@ -16,6 +16,7 @@ public class Shelter {
     }
 
     public ShelterPet findPet(String name) {
+
         return (ShelterPet) petList.get(name);
     }
 
@@ -35,8 +36,8 @@ public class Shelter {
 
     public Collection<ShelterPet> getRoboPets() {
         Collection<ShelterPet> roboPets = new ArrayList<>();
-        for (ShelterPet pet : petList.values()){
-            if (pet instanceof RoboPet){
+        for (ShelterPet pet : petList.values()) {
+            if (pet instanceof RoboPet) {
                 roboPets.add(pet);
             }
         }
@@ -48,6 +49,26 @@ public class Shelter {
 
     }
 
+    public Collection<ShelterPet> getOrganicDogs() {
+        Collection<ShelterPet> organicDogs = new ArrayList<>();
+        for (ShelterPet pet : petList.values()) {
+            if (pet instanceof OrganicDog) {
+                organicDogs.add(pet);
+            }
+        }
 
+        return organicDogs;
+    }
+
+    public Collection<ShelterPet> getShelterPets() {
+        Collection<ShelterPet> shelterPets = new ArrayList<>();
+        for (ShelterPet pet : petList.values()) {
+            if (pet instanceof ShelterPet) {
+                shelterPets.add(pet);
+            }
+        }
+
+        return shelterPets;
+    }
 }
 
