@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DogTest {
 
-    Dog underTest = new Dog("Archer", "Lazy", 50,50,50, 50);
+    Dog underTest = new Dog("2", "Archer", "Lazy",50,50,50, 50);
 
     @Test
     public void shouldDecreaseHungerBy10WhenFed(){

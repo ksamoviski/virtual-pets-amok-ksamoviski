@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CatTest {
 
-    Cat underTest = new Cat("Dot", "Lazy", 50,50,50);
+    Cat underTest = new Cat("2", "Dot", "Lazy", 50,50,50);
 
 
     @Test

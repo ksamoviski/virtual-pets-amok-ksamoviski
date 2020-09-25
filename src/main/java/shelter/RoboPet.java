@@ -1,6 +1,6 @@
 package shelter;
 
-public class RoboPet {
+public abstract class RoboPet {
     protected String name;
     protected String characteristics;
     protected int hungerLevel;
@@ -8,7 +8,7 @@ public class RoboPet {
     protected int boredomLevel;
     protected int stiffnessLevel;
 
-    public RoboPet(String name, String characteristics, int hungerLevel, int thirstLevel, int boredomLevel, int stiffnessLevel) {
+    public RoboPet(String petId, String name, String characteristics, int hungerLevel, int thirstLevel, int boredomLevel, int stiffnessLevel) {
         this.name = name;
         this.characteristics = characteristics;
         this.hungerLevel = hungerLevel;

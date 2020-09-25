@@ -5,14 +5,16 @@ import java.util.Map;
 
 public class Shelter {
 
-    Map<String, ShelterPet> petList = new HashMap<>();
-    private int patientId;
+    Map<String, LivingPet> pets = new HashMap<>();
 
-    public void add(Dog dog) {
-        petList.put(dog.getPetId(), dog)
+    private int petId;
+
+    public void add(LivingPet petToAdd) {
+        pets.put(petToAdd.getName(), petToAdd);
     }
 
-    public Dog findPet(String s) {
-        return null;
+
+    public LivingPet findPet(String petName) {
+        return pets.get(petName);
     }
 }
